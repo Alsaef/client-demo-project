@@ -19,7 +19,7 @@ const SideSlide = () => {
   
     return (
         <div className='z-0'>
-            <label  htmlFor="cart-drawer" className="fixed right-0 top-1/2 -translate-y-1/2  bg-orange-500 text-white rounded-l-xl p-2.5 shadow-lg text-center flex flex-col items-center justify-center cursor-pointer hover:bg-orange-600 transition-colors">
+            <label  htmlFor="cart-drawer" className="fixed right-0 top-1/2 -translate-y-1/2 z-10 bg-orange-500 text-white rounded-l-xl p-2.5 shadow-lg text-center flex flex-col items-center justify-center cursor-pointer hover:bg-orange-600 transition-colors">
                 <FaShoppingBag className="text-lg mb-1 " />
                 <span className="text-[10px] font-bold block leading-tight">0 Items</span>
                 <span className="text-[10px] font-semibold bg-white text-orange-500 px-1.5 py-0.5 rounded mt-1">৳0.00</span>

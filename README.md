@@ -41,9 +41,7 @@ Ensure you have the following installed on your machine:
 
 ### 1. Clone the Repository
 
-```bash
-git clone [https://github.com/your-username/ghorer-bazar-client.git](https://github.com/your-username/ghorer-bazar-client.git)
-cd ghorer-bazar-client
+
 
 ### 2. Install Dependencies
 

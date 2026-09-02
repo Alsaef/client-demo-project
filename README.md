@@ -1,16 +1,56 @@
-# React + Vite
+# 🌾 Ghorer Bazar clone - E-Commerce Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and feature-rich organic food e-commerce platform built with **React**, **Vite**, **Tailwind CSS**, and **DaisyUI**. Inspired by Ghorer Bazar clone, this application features product categories, interactive sliders, a slide-out cart drawer, and dynamic product showcase sections.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🎨 **Modern & Organic UI**: Clean design palette utilizing `#FBF9F5` background, vibrant orange primary accents, and deep organic greens.
+- 📱 **Fully Responsive Layout**: Mobile-first responsive grids and components across mobile, tablet, and desktop screens.
+- 🖼️ **Hero Banner Slider**: Interactive main hero banner built with **Swiper.js** with autoplay and pagination.
+- 🏷️ **Category Carousel**: Dynamic category navigation slider featuring high-quality images.
+- 🔥 **Top Selling Products Grid**: Dual-column product cards with quick "Add to Cart" and "Buy Now" actions.
+- 🍯 **Product Showcases**: Specialized multi-item category carousels (e.g., *All Natural Honey*, *Our Brands*).
+- 🛒 **Slide-Over Cart Drawer**: Right-hand slide-out cart built with DaisyUI drawers for convenient checkout workflows.
+- ➕ **Load More Pagination**: State-driven product listing that dynamically loads additional products upon user click.
+- 🦶 **Comprehensive Footer**: Complete with navigation columns, social links, payment gateway badges, app download links, and quick floating action buttons.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Framework:** React.js (via Vite)
+- **Styling:** Tailwind CSS, DaisyUI
+- **HTTP Client:** Axios
+- **Sliders & Carousels:** Swiper.js
+- **Icons:** React Icons (`react-icons`)
+- **Routing:** React Router DOM (`react-router-dom`)
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- **Node.js** (v16.0 or higher)
+- **npm**, **yarn**, or **pnpm**
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/your-username/ghorer-bazar-client.git](https://github.com/your-username/ghorer-bazar-client.git)
+cd ghorer-bazar-client
+
+### 2. Install Dependencies
+
+```bash
+npm install
+``` bash
+
+```bash
+npm install react-router-dom swiper axios react-icons daisyui
+```bash

@@ -47,8 +47,8 @@ Ensure you have the following installed on your machine:
 
 ```bash
 npm install
-``` bash
+```
 
 ```bash
 npm install react-router-dom swiper axios react-icons daisyui
-```bash
+```

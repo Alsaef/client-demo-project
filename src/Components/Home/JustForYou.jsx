@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FiShoppingCart } from 'react-icons/fi';
+import Card from '../Cards/Card';
 
 const JustForYou = () => {
   const [products, setProducts] = useState([]);
@@ -60,37 +61,7 @@ const JustForYou = () => {
         {/* Product Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {displayedProducts.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-[360px]"
-            >
-              {/* Product Image */}
-              <div className="w-full h-40 flex items-center justify-center p-2">
-                <img
-                  src={product.image}
-                  alt={product.product_name}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-
-              {/* Product Info */}
-              <div className="mt-2 flex flex-col flex-grow justify-between">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-800 line-clamp-2">
-                    {product.product_name}
-                  </h3>
-                  <p className="text-orange-500 font-bold text-base mt-1">
-                    ৳{product.price.toLocaleString()}
-                  </p>
-                </div>
-
-                {/* Add To Cart Button */}
-                <button className="w-full mt-3 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-medium text-xs py-2 rounded-lg transition-colors flex items-center justify-center gap-2">
-                  <FiShoppingCart className="w-3.5 h-3.5" />
-                  <span>Add To Cart</span>
-                </button>
-              </div>
-            </div>
+           <Card key={product.id} product={product} />
           ))}
         </div>
 

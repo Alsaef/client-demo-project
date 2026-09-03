@@ -1,11 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 const mainSliderImages = [
   {
@@ -30,15 +29,16 @@ const mainSliderImages = [
 
 const sideBanner = {
   image: 'https://backoffice.ghorerbazar.com/banner/ZwGbr1787805653-500x410.png',
- 
+  title: 'Daily Combo Offers',
+  subtitle: 'Save Extra Today',
 };
 
 const HeroBanner = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        
-        {/* Main 3-Photo Swiper Slider (Takes 3 Columns on Large Screens) */}
+
+        {/* Main 3-Photo Swiper Slider */}
         <div className="lg:col-span-3 rounded-2xl overflow-hidden shadow-sm relative group h-[250px] sm:h-[350px] md:h-[420px]">
           <Swiper
             spaceBetween={0}
@@ -51,8 +51,8 @@ const HeroBanner = () => {
               clickable: true,
               dynamicBullets: true,
             }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            navigation={false}
+            modules={[Autoplay, Pagination]}
             className="w-full h-full mySwiper"
           >
             {mainSliderImages.map((slide) => (
@@ -81,57 +81,45 @@ const HeroBanner = () => {
           </Swiper>
         </div>
 
-        {/* Side Banner (Takes 1 Column on Large Screens) */}
+        {/* Side Banner */}
         <div className="lg:col-span-1 rounded-2xl overflow-hidden shadow-sm relative group h-[180px] lg:h-[420px]">
           <img
             src={sideBanner.image}
-            alt={sideBanner.title}
+            alt={sideBanner.title || 'Side Banner'}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
           {/* Side Overlay */}
-          <div className="absolute inset-0  flex flex-col justify-end p-5 text-white">
+          <div className="absolute inset-0 flex flex-col justify-end p-5 text-white bg-gradient-to-t from-black/60 via-transparent to-transparent">
             <span className="bg-orange-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit mb-2">
               Hot Deal
             </span>
-            <h3 className="text-lg font-bold leading-snug">
-              {sideBanner.title}
-            </h3>
-            <p className="text-xs text-gray-200 mt-1">
-              {sideBanner.subtitle}
-            </p>
+            {sideBanner.title && (
+              <h3 className="text-lg font-bold leading-snug">
+                {sideBanner.title}
+              </h3>
+            )}
+            {sideBanner.subtitle && (
+              <p className="text-xs text-gray-200 mt-1">
+                {sideBanner.subtitle}
+              </p>
+            )}
           </div>
         </div>
 
       </div>
-      <style>
-        {
-            `
-            /* Custom Swiper Pagination Dot Color */
-.swiper-pagination-bullet-active {
-  background-color: #f97316 !important; /* Tailwind orange-500 */
-}
 
-/* Custom Swiper Navigation Arrow Color */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ffffff !important;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 50%;
-  transition: background-color 0.2s ease;
-}
-
-
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 14px !important;
-  font-weight: bold;
-}
-            `
+      {/* Style overrides for pagination dots */}
+      <style>{`
+        .mySwiper .swiper-pagination-bullet-active {
+          background-color: #f97316 !important;
         }
-      </style>
+
+        /* Fully hide navigation arrows fallback */
+        .mySwiper .swiper-button-next,
+        .mySwiper .swiper-button-prev {
+          display: none !important;
+        }
+      `}</style>
     </div>
   );
 };

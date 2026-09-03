@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Card = ({ product }) => {
     return (
@@ -25,9 +26,11 @@ const Card = ({ product }) => {
                   {/* Product Details */}
                   <div className="mt-4 flex flex-col flex-grow justify-between">
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
+                     <Link to={`/product/${product.id}`}>
+                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px] hover:text-orange-500 transition-colors">
                         {product.product_name}
                       </h3>
+                     </Link>
 
                       <div className="mt-2 flex items-center gap-2">
                         <span className="text-orange-500 font-bold text-base">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FiShoppingCart } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const TopSellingProducts = () => {
   const [bestSellers, setBestSellers] = useState([]);
@@ -64,9 +65,7 @@ const TopSellingProducts = () => {
               {/* Product Info Section */}
               <div className="w-full sm:w-2/3 sm:pl-4 flex flex-col justify-center text-center sm:text-left">
                 {/* Name */}
-                <h3 className="text-sm sm:text-base font-semibold text-gray-800 mb-1 line-clamp-2">
-                  {product.product_name}
-                </h3>
+                <Link to={`/product/${product.id}`} className="text-sm sm:text-base font-semibold text-gray-800 hover:text-[#49A760] transition-colors line-clamp-2"><span>{product.product_name}</span></Link>
 
                 {/* Price */}
                 <div className="flex items-center justify-center sm:justify-start gap-2 mb-3 sm:mb-4">

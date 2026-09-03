@@ -35,7 +35,7 @@ const SideSlide = () => {
         </span>
       </label>
 
-      {/* 2. Scroll To Top Button */}
+      {/* 2. Scroll To Top Button
       {visible && (
         <button
           onClick={scrollToTop}
@@ -44,7 +44,7 @@ const SideSlide = () => {
         >
           <FaChevronUp />
         </button>
-      )}
+      )} */}
 
       {/* 3. Live Chat Floating Button */}
       <button

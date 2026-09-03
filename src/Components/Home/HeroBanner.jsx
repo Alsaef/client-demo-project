@@ -71,7 +71,7 @@ const HeroBanner = () => {
                     {slide.subtitle}
                   </p>
                   <div>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-lg transition-colors shadow-md">
+                    <button className="bg-[#49A760] hover:bg-[#3d8c50] text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-lg transition-colors shadow-md">
                       Shop Now
                     </button>
                   </div>
@@ -90,7 +90,7 @@ const HeroBanner = () => {
           />
           {/* Side Overlay */}
           <div className="absolute inset-0 flex flex-col justify-end p-5 text-white bg-gradient-to-t from-black/60 via-transparent to-transparent">
-            <span className="bg-orange-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit mb-2">
+            <span className="bg-[#49A760] text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-fit mb-2">
               Hot Deal
             </span>
             {sideBanner.title && (
@@ -111,7 +111,7 @@ const HeroBanner = () => {
       {/* Style overrides for pagination dots */}
       <style>{`
         .mySwiper .swiper-pagination-bullet-active {
-          background-color: #f97316 !important;
+          background-color: #49A760 !important;
         }
 
         /* Fully hide navigation arrows fallback */

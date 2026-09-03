@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // or 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 
@@ -11,27 +11,27 @@ const brands = [
   {
     id: 1,
     name: 'Glarvest',
-    logo: 'https://backoffice.ghorerbazar.com/brand_images/RNTIU1763611802.png', // Replace with your actual Glarvest logo URL
+    logo: 'https://backoffice.ghorerbazar.com/brand_images/RNTIU1763611802.png',
   },
   {
     id: 2,
     name: 'Khejuri',
-    logo: 'https://backoffice.ghorerbazar.com/brand_images/8Gpl21757919440.png', // Replace with your actual Khejuri logo URL
+    logo: 'https://backoffice.ghorerbazar.com/brand_images/8Gpl21757919440.png',
   },
   {
     id: 3,
     name: 'Shosti Food',
-    logo: "https://backoffice.ghorerbazar.com/brand_images/8matO1757919401.png", // Replace with your actual Shosti Food logo URL
+    logo: "https://backoffice.ghorerbazar.com/brand_images/8matO1757919401.png",
   },
   {
     id: 4,
     name: 'Honeyraj',
-    logo: 'https://backoffice.ghorerbazar.com/brand_images/lCfRt1759553456.png', // Replace with your actual Honeyraj logo URL
+    logo: 'https://backoffice.ghorerbazar.com/brand_images/lCfRt1759553456.png',
   },
   {
     id: 5,
     name: 'GhorerBazar',
-    logo: 'https://backoffice.ghorerbazar.com/brand_images/brand_logo.png', // Replace with your actual GhorerBazar logo URL
+    logo: 'https://backoffice.ghorerbazar.com/brand_images/brand_logo.png',
   },
 ];
 
@@ -46,16 +46,16 @@ const OurBrands = () => {
             <h2 className="text-xl font-bold text-gray-900 tracking-tight">
               Our Brands
             </h2>
-            {/* Orange Underline Accent */}
-            <span className="absolute left-0 -bottom-[9px] w-12 h-[3px] bg-orange-500 rounded-full" />
+            {/* Brand Green Underline Accent */}
+            <span className="absolute left-0 -bottom-[9px] w-12 h-[3px] bg-[#49A760] rounded-full" />
           </div>
 
-          <a 
-            href="/brands" 
-            className="text-xs font-semibold text-orange-500 hover:text-orange-600 flex items-center gap-1 uppercase tracking-wider transition-colors"
+          <Link 
+            to="/brands" 
+            className="text-xs font-semibold text-[#49A760] hover:text-[#3d8c50] flex items-center gap-1 uppercase tracking-wider transition-colors"
           >
             SEE ALL <span className="text-sm">→</span>
-          </a>
+          </Link>
         </div>
 
         {/* Swiper Brands Slider */}
@@ -96,21 +96,18 @@ const OurBrands = () => {
 
       {/* Custom Styles for Swiper Pagination Bullet Dots */}
       <style>{`
-        .brands-swiper-container .swiper-pagination {
-          
-        }
         .brands-swiper-container .swiper-pagination-bullet {
           width: 8px;
           height: 8px;
           background-color: transparent;
-          border: 1.5px solid #f97316;
+          border: 1.5px solid #49A760;
           opacity: 1;
           margin: 0 4px !important;
           margin-bottom: -10px !important;
         }
         .brands-swiper-container .swiper-pagination-bullet-active {
-          background-color: #f97316 !important;
-          border-color: #f97316 !important;
+          background-color: #49A760 !important;
+          border-color: #49A760 !important;
         }
       `}</style>
     </section>

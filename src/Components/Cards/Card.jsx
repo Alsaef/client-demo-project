@@ -9,7 +9,7 @@ const Card = ({ product }) => {
                   
                   {/* Badge */}
                   {product.product_flag === 'Best Selling' && (
-                    <div className="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded shadow-sm z-10">
+                    <div className="absolute top-3 left-3 bg-[#49A760] text-white text-[10px] font-semibold px-2 py-0.5 rounded shadow-sm z-10">
                       Best Selling
                     </div>
                   )}
@@ -27,13 +27,13 @@ const Card = ({ product }) => {
                   <div className="mt-4 flex flex-col flex-grow justify-between">
                     <div>
                      <Link to={`/product/${product.id}`}>
-                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px] hover:text-orange-500 transition-colors">
+                      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px] hover:text-[#49A760] transition-colors">
                         {product.product_name}
                       </h3>
                      </Link>
 
                       <div className="mt-2 flex items-center gap-2">
-                        <span className="text-orange-500 font-bold text-base">
+                        <span className="text-[#49A760] font-bold text-base">
                           ৳{product.discount_price ? product.discount_price.toLocaleString() : product.price.toLocaleString()}
                         </span>
                         {product.discount_price && (
@@ -45,7 +45,7 @@ const Card = ({ product }) => {
                     </div>
 
                     {/* Add To Cart Button */}
-                    <button className="w-full mt-4 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-medium text-xs py-2 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <button className="w-full mt-4 border border-[#49A760] text-[#49A760] hover:bg-[#49A760] hover:text-white font-medium text-xs py-2 rounded-lg transition-colors flex items-center justify-center gap-2">
                       <FiShoppingCart className="w-3.5 h-3.5" />
                       <span>Add To Cart</span>
                     </button>

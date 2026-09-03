@@ -63,16 +63,16 @@ const categories = [
 const CategorySlider = () => {
   return (
     <div className="w-full bg-[#FAF9F6] py-8">
-        <div>
-            <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Shop by Category</h1>
-        </div>
+      <div>
+        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Shop by Category</h1>
+      </div>
       <div className="max-w-7xl mx-auto px-4 relative group">
         
         {/* Custom Navigation Arrows */}
-        <button className="category-prev absolute left-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-orange-200 hover:bg-orange-500 text-orange-600 hover:text-white flex items-center justify-center transition-colors shadow-sm focus:outline-none">
+        <button className="category-prev absolute left-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-green-100 hover:bg-[#49A760] text-[#49A760] hover:text-white flex items-center justify-center transition-colors shadow-sm focus:outline-none">
           &#10094;
         </button>
-        <button className="category-next absolute right-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-orange-500 text-white hover:bg-orange-600 flex items-center justify-center transition-colors shadow-sm focus:outline-none">
+        <button className="category-next absolute right-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[#49A760] text-white hover:bg-[#3d8c50] flex items-center justify-center transition-colors shadow-sm focus:outline-none">
           &#10095;
         </button>
 
@@ -104,7 +104,7 @@ const CategorySlider = () => {
                 className="flex flex-col items-center group/item text-center cursor-pointer"
               >
                 {/* White Rounded Card Box for Image */}
-                <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-2xl p-4 shadow-sm flex items-center justify-center border border-gray-100 group-hover/item:shadow-md group-hover/item:border-orange-200 transition-all">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-2xl p-4 shadow-sm flex items-center justify-center border border-gray-100 group-hover/item:shadow-md group-hover/item:border-[#49A760]/40 transition-all">
                   <img
                     src={cat.image}
                     alt={cat.name}
@@ -112,7 +112,7 @@ const CategorySlider = () => {
                   />
                 </div>
                 {/* Category Label */}
-                <span className="mt-3 text-xs sm:text-sm font-medium text-gray-700 group-hover/item:text-orange-500 transition-colors">
+                <span className="mt-3 text-xs sm:text-sm font-medium text-gray-700 group-hover/item:text-[#49A760] transition-colors">
                   {cat.name}
                 </span>
               </Link>

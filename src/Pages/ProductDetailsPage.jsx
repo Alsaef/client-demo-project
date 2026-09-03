@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
-  FiShoppingCart, 
   FiPhoneCall, 
   FiMinus, 
   FiPlus, 
@@ -43,7 +42,7 @@ const ProductDetails = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-[#FBF9F5] flex justify-center items-center">
-        <span className="loading loading-spinner loading-lg text-orange-500"></span>
+        <span className="loading loading-spinner loading-lg text-[#49A760]"></span>
       </div>
     );
   }
@@ -63,7 +62,7 @@ const ProductDetails = () => {
 
         {/* Breadcrumb Navigation */}
         <nav className="text-sm text-gray-500 mb-6 flex items-center gap-2">
-          <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[#49A760] transition-colors">Home</Link>
           <span>&gt;</span>
           <span className="text-gray-700 font-medium">Products</span>
         </nav>
@@ -77,7 +76,7 @@ const ProductDetails = () => {
               
               {/* Active Single Product Thumbnail */}
               <div className="flex sm:flex-col gap-3">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 border-orange-500 p-1 shadow-sm overflow-hidden">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 border-[#49A760] p-1 shadow-sm overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.product_name}
@@ -106,7 +105,7 @@ const ProductDetails = () => {
 
               {/* Pricing */}
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-2xl sm:text-3xl font-extrabold text-orange-500">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#49A760]">
                   ৳{finalPrice.toLocaleString()}
                 </span>
                 {product.discount_price && (
@@ -124,7 +123,7 @@ const ProductDetails = () => {
                 <div className="flex items-center border border-gray-200 rounded-lg">
                   <button
                     onClick={() => handleQuantityChange('dec')}
-                    className="p-2 text-gray-500 hover:text-orange-500 transition-colors"
+                    className="p-2 text-gray-500 hover:text-[#49A760] transition-colors"
                   >
                     <FiMinus className="text-sm" />
                   </button>
@@ -133,7 +132,7 @@ const ProductDetails = () => {
                   </span>
                   <button
                     onClick={() => handleQuantityChange('inc')}
-                    className="p-2 text-gray-500 hover:text-orange-500 transition-colors"
+                    className="p-2 text-gray-500 hover:text-[#49A760] transition-colors"
                   >
                     <FiPlus className="text-sm" />
                   </button>
@@ -142,7 +141,7 @@ const ProductDetails = () => {
 
               {/* Primary Buttons */}
               <div className="grid grid-cols-2 gap-3 mt-4">
-                <button className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg shadow-sm transition-colors text-sm uppercase tracking-wider">
+                <button className="flex items-center justify-center gap-2 bg-[#49A760] hover:bg-[#3d8c50] text-white font-bold py-3 px-4 rounded-lg shadow-sm transition-colors text-sm uppercase tracking-wider">
                   <FiShoppingBag className="text-lg" />
                   Add To Cart
                 </button>
@@ -194,7 +193,7 @@ const ProductDetails = () => {
             </h2>
             <Link 
               to="/products" 
-              className="text-orange-500 hover:text-orange-600 font-semibold text-sm flex items-center gap-1"
+              className="text-[#49A760] hover:text-[#3d8c50] font-semibold text-sm flex items-center gap-1"
             >
               More Products <FiArrowRight />
             </Link>
@@ -202,7 +201,7 @@ const ProductDetails = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {relatedProducts.map((relProduct) => (
-             <Card key={relProduct.id} product={relProduct} />
+              <Card key={relProduct.id} product={relProduct} />
             ))}
           </div>
         </div>

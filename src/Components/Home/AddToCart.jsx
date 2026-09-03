@@ -21,7 +21,7 @@ const AddToCartDrawer = () => {
             <div>
               <div className="flex items-center justify-between border-b border-gray-100 pb-4">
                 <h2 className="text-lg font-bold flex items-center gap-2 text-gray-800">
-                  <FiShoppingBag className="text-orange-500" />
+                  <FiShoppingBag className="text-[#49A760]" />
                   Your Shopping Cart
                 </h2>
                 <label 
@@ -46,7 +46,7 @@ const AddToCartDrawer = () => {
                       Sundarban Honey 1kg
                     </h3>
                     <p className="text-xs text-gray-500 mt-0.5">1 x ৳2,500</p>
-                    <p className="text-sm font-bold text-orange-500 mt-1">৳2,500</p>
+                    <p className="text-sm font-bold text-[#49A760] mt-1">৳2,500</p>
                   </div>
                   <button className="text-gray-400 hover:text-red-500 p-1 transition-colors">
                     <FiTrash2 />
@@ -59,13 +59,13 @@ const AddToCartDrawer = () => {
             <div className="border-t border-gray-100 pt-4 space-y-3">
               <div className="flex justify-between items-center text-sm font-bold text-gray-800">
                 <span>Subtotal</span>
-                <span className="text-orange-500 text-base">৳2,500</span>
+                <span className="text-[#49A760] text-base">৳2,500</span>
               </div>
               <p className="text-xs text-gray-400">
                 Shipping and taxes calculated at checkout.
               </p>
               <div className="space-y-2 pt-2">
-                <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm">
+                <button className="w-full bg-[#49A760] hover:bg-[#3d8c50] text-white font-semibold py-2.5 rounded-xl transition-colors shadow-sm">
                   Proceed to Checkout
                 </button>
                 <label 

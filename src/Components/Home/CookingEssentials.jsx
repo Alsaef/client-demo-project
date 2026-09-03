@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import { FiShoppingCart } from 'react-icons/fi';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,22 +10,22 @@ import 'swiper/css/pagination';
 import Card from '../Cards/Card';
 
 const CookingEssentials = () => {
-  const [honeyProducts, setHoneyProducts] = useState([]);
+  const [cookingProducts, setCookingProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch products JSON
     axios.get('/products.json')
       .then((res) => {
-        // Filter products belonging to Honey category
+        // Filter products belonging to Oil & Ghee category
         const filtered = res.data.filter(
           (product) => product.main_category === 'Oil & Ghee'
         );
-        setHoneyProducts(filtered);
+        setCookingProducts(filtered);
         setLoading(false);
       })
       .catch((err) => {
-        console.error('Error fetching honey products:', err);
+        console.error('Error fetching cooking products:', err);
         setLoading(false);
       });
   }, []);
@@ -33,7 +33,7 @@ const CookingEssentials = () => {
   if (loading) {
     return (
       <div className="w-full bg-[#FBF9F5] py-12 flex justify-center items-center">
-        <span className="loading loading-spinner text-orange-500 loading-lg"></span>
+        <span className="loading loading-spinner text-[#49A760] loading-lg"></span>
       </div>
     );
   }
@@ -48,20 +48,20 @@ const CookingEssentials = () => {
             <h2 className="text-xl font-bold text-gray-900 tracking-tight">
               Cooking Essentials
             </h2>
-            {/* Orange Underline Accent */}
-            <span className="absolute left-0 -bottom-[9px] w-12 h-[3px] bg-orange-500 rounded-full" />
+            {/* Green Underline Accent */}
+            <span className="absolute left-0 -bottom-[9px] w-12 h-[3px] bg-[#49A760] rounded-full" />
           </div>
 
-          <a 
-            href="/category/honey" 
-            className="text-xs font-semibold text-orange-500 hover:text-orange-600 flex items-center gap-1 uppercase tracking-wider transition-colors"
+          <Link 
+            to="/category/oil-ghee" 
+            className="text-xs font-semibold text-[#49A760] hover:text-[#3d8c50] flex items-center gap-1 uppercase tracking-wider transition-colors"
           >
             VIEW ALL ITEMS <span className="text-sm">→</span>
-          </a>
+          </Link>
         </div>
 
-        {/* Swiper Honey Slider */}
-        <div className="honey-swiper-container pb-10">
+        {/* Swiper Slider */}
+        <div className="cooking-swiper-container pb-10">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={16}
@@ -80,9 +80,9 @@ const CookingEssentials = () => {
             }}
             className="w-full"
           >
-            {honeyProducts.map((product) => (
+            {cookingProducts.map((product) => (
               <SwiperSlide key={product.id}>
-               <Card product={product} />
+                <Card product={product} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -90,24 +90,25 @@ const CookingEssentials = () => {
 
       </div>
 
-      {/* Swiper Pagination Styling */}
+      {/* Swiper Pagination Styling Override */}
       <style>{`
-        .honey-swiper-container .swiper-pagination {
+        .cooking-swiper-container .swiper-pagination {
           bottom: 0px !important;
         }
-        .honey-swiper-container .swiper-pagination-bullet {
-          width: 7px;
-          height: 7px;
-          background-color: transparent;
-          border: 1.5px solid #f97316;
-          opacity: 1;
+        .cooking-swiper-container .swiper-pagination-bullet {
+          width: 8px !important;
+          height: 8px !important;
+          background-color: transparent !important;
+          border: 1.5px solid #49A760 !important;
+          opacity: 1 !important;
           margin: 0 4px !important;
+          transition: all 0.3s ease;
         }
-        .honey-swiper-container .swiper-pagination-bullet-active {
-          background-color: #f97316 !important;
-          border-color: #f97316 !important;
-          width: 18px;
-          border-radius: 4px;
+        .cooking-swiper-container .swiper-pagination-bullet-active {
+          background-color: #49A760 !important;
+          border-color: #49A760 !important;
+          width: 22px !important;
+          border-radius: 9999px !important;
         }
       `}</style>
     </section>

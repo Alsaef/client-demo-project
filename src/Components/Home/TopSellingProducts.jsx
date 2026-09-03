@@ -26,7 +26,7 @@ const TopSellingProducts = () => {
   if (loading) {
     return (
       <div className="w-full bg-[#FBF9F5] py-12 flex justify-center items-center">
-        <span className="loading loading-spinner text-orange-500 loading-lg"></span>
+        <span className="loading loading-spinner text-[#49A760] loading-lg"></span>
       </div>
     );
   }
@@ -70,7 +70,7 @@ const TopSellingProducts = () => {
 
                 {/* Price */}
                 <div className="flex items-center justify-center sm:justify-start gap-2 mb-3 sm:mb-4">
-                  <span className="text-orange-500 font-bold text-base sm:text-lg">
+                  <span className="text-[#49A760] font-bold text-base sm:text-lg">
                     ৳{product.discount_price ? product.discount_price.toLocaleString() : product.price.toLocaleString()}
                   </span>
                   {product.discount_price && (
@@ -82,11 +82,11 @@ const TopSellingProducts = () => {
 
                 {/* Action Buttons */}
                 <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3">
-                  <button className="flex-1 sm:flex-none justify-center flex items-center gap-1.5 border border-orange-400 text-orange-500 hover:bg-orange-50 text-xs font-semibold px-3 py-2 rounded-lg transition-colors">
+                  <button className="flex-1 sm:flex-none justify-center flex items-center gap-1.5 border border-[#49A760] text-[#49A760] hover:bg-green-50 text-xs font-semibold px-3 py-2 rounded-lg transition-colors">
                     <FiShoppingCart className="w-3.5 h-3.5" />
                     <span className="whitespace-nowrap">Add To Cart</span>
                   </button>
-                  <button className="flex-1 sm:flex-none justify-center flex items-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                  <button className="flex-1 sm:flex-none justify-center flex items-center gap-1.5 bg-[#49A760] hover:bg-[#3d8c50] text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm">
                     <FiShoppingCart className="w-3.5 h-3.5" />
                     <span className="whitespace-nowrap">Buy now</span>
                   </button>

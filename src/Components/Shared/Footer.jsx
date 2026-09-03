@@ -23,7 +23,7 @@ const Footer = () => {
 
             {/* Description */}
             <p className="text-sm text-gray-500 max-w-sm leading-relaxed">
-              Ghorer Bazar is an e-commerce platform dedicated to providing safe and reliable food to every home.
+             Gramika is an e-commerce platform dedicated to providing safe and reliable food to every home.
             </p>
 
             {/* Contact Details */}

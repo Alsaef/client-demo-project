@@ -35,7 +35,7 @@ const SideSlide = () => {
         </span>
       </label>
 
-      2. Scroll To Top Button
+      {/* 2. Scroll To Top Button */}
       {visible && (
         <button
           onClick={scrollToTop}
